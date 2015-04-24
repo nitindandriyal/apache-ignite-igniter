@@ -17,6 +17,15 @@ public class Main{
 			cache.put(1238, "Test Data 1238");
 			
 			cache.forEach(i -> System.out.println(i));
+			
+			System.out.println("getAndPutIfAbsent: " + cache.getAndPutIfAbsent(1234, "Test Data 1234 Replaced"));
+			System.out.println("get: " + cache.get(1234));
+			
+			System.out.println("getAndPut: " + cache.getAndPut(1234, "Test Data 1234 Replaced"));
+			System.out.println("get: " + cache.get(1234));
+			
+			System.out.println("getAndReplace: " + cache.getAndReplace(1234, "Test Data 1234 Replaced Again"));
+			System.out.println("get: " + cache.get(1234));
 		}
 	}
 }
